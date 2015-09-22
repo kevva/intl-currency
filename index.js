@@ -1,5 +1,6 @@
 'use strict';
-var Intl = require('intl');
+var intl = require('intl');
+var isBrowser = require('is-browser');
 var objectAssign = require('object-assign');
 
 module.exports = function (val, opts) {
@@ -16,5 +17,10 @@ module.exports = function (val, opts) {
 	var locales = opts.locales;
 	delete opts.locales;
 
-	return new Intl.NumberFormat(locales, opts).format(val);
+	if (isBrowser) {
+		global.Intl = global.Intl || intl;
+		new Intl.NumberFormat(locales, opts).format(val);
+	}
+
+	return new intl.NumberFormat(locales, opts).format(val);
 };

@@ -26,10 +26,17 @@
   ],
   "dependencies": {
     "intl": "^1.0.0",
+    "is-browser": "^2.0.1",
     "object-assign": "^4.0.1"
   },
   "devDependencies": {
     "ava": "*",
     "xo": "*"
+  },
+  "xo": {
+    "envs": [
+      "browser",
+      "node"
+    ]
   }
 }
