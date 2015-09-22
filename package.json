@@ -1,0 +1,35 @@
+{
+  "name": "intl-currency",
+  "version": "1.0.0",
+  "description": "Convert numbers to currencies",
+  "license": "MIT",
+  "repository": "kevva/intl-currency",
+  "author": {
+    "name": "Kevin Mårtensson",
+    "email": "kevinmartensson@gmail.com",
+    "url": "github.com/kevva"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "convert",
+    "currency",
+    "intl",
+    "locale"
+  ],
+  "dependencies": {
+    "intl": "^1.0.0",
+    "object-assign": "^4.0.1"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
+  }
+}
