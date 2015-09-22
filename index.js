@@ -19,7 +19,7 @@ module.exports = function (val, opts) {
 
 	if (isBrowser) {
 		global.Intl = global.Intl || intl;
-		new Intl.NumberFormat(locales, opts).format(val);
+		return new Intl.NumberFormat(locales, opts).format(val);
 	}
 
 	return new intl.NumberFormat(locales, opts).format(val);
