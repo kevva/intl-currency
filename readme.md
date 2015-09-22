@@ -33,7 +33,7 @@ intlCurrency(129, {
 
 ## API
 
-### intlCurrency(value, [options])
+### intlCurrency(value, options)
 
 #### value
 
