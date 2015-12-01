@@ -20,6 +20,4 @@ test(t => {
 		minimumFractionDigits: 0,
 		maximumFractionDigits: 0
 	}), '$1');
-
-	t.end();
 });
