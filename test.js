@@ -20,4 +20,11 @@ test(t => {
 		minimumFractionDigits: 0,
 		maximumFractionDigits: 0
 	}), '$1');
+
+	t.is(intlCurrency(1, {
+		locales: 'en-US',
+		minimumFractionDigits: 0,
+		maximumFractionDigits: 0,
+		style: 'decimal'
+	}), '1');
 });

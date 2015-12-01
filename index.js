@@ -8,11 +8,11 @@ module.exports = function (val, opts) {
 		throw new Error('Locales is required');
 	}
 
-	if (!opts.currency) {
+	opts = objectAssign({style: 'currency'}, opts);
+
+	if (!opts.currency && opts.style === 'currency') {
 		throw new Error('Currency is required');
 	}
-
-	opts = objectAssign(opts, {style: 'currency'});
 
 	var locales = opts.locales;
 	delete opts.locales;
